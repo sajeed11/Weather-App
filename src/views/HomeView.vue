@@ -4,6 +4,7 @@ import axios from "axios";
 import env from "../lib/env.js";
 import { useRouter } from "vue-router";
 import CityList from "@/components/CityList.vue";
+import CityCardSkeleton from "@/components/CityCardSkeleton.vue";
 
 const router = useRouter();
 
@@ -86,7 +87,7 @@ const getSearchResults = () => {
       <Suspense>
         <CityList />
         <template #fallback>
-          <div class="text-center">Loading...</div>
+          <CityCardSkeleton />
         </template>
       </Suspense>
     </div>

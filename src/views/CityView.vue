@@ -1,13 +1,15 @@
 <script setup>
 import AsyncCityView from "@/components/AsyncCityView.vue";
+import CityViewSkeleton from "@/components/CityViewSkeleton.vue";
 </script>
 
 <template>
   <div>
     <!-- Suspense is currently not supported in Vue 3's script setup syntax. -->
     <Suspense>
-      <template #default>
-        <AsyncCityView />
+      <AsyncCityView />
+      <template #fallback>
+        <CityViewSkeleton />
       </template>
     </Suspense>
   </div>
