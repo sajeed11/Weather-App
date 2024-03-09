@@ -4,10 +4,10 @@ import AsyncCityView from "@/components/AsyncCityView.vue";
 
 <template>
   <div>
+    <!-- Suspense is currently not supported in Vue 3's script setup syntax. -->
     <Suspense>
-      <AsyncCityView />
-      <template>
-        <p>Loading...</p>
+      <template #default>
+        <AsyncCityView />
       </template>
     </Suspense>
   </div>
