@@ -3,6 +3,7 @@ import { ref } from "vue";
 import axios from "axios";
 import env from "../lib/env.js";
 import { useRouter } from "vue-router";
+import CityList from "@/components/CityList.vue";
 
 const router = useRouter();
 
@@ -80,6 +81,14 @@ const getSearchResults = () => {
           </li>
         </template>
       </ul>
+    </div>
+    <div class="flex flex-col gap-4">
+      <Suspense>
+        <CityList />
+        <template #fallback>
+          <div class="text-center">Loading...</div>
+        </template>
+      </Suspense>
     </div>
   </main>
 </template>
