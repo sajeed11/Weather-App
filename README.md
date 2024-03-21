@@ -33,3 +33,9 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Screenshot from the site
+
+![Landing Page](src/assets/screenshots/TheMainPage.png)
+
+![Search about city](src/assets/screenshots/SearchCity.png)
